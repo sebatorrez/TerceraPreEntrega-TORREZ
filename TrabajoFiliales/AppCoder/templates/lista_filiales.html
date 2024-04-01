@@ -1,0 +1,16 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<ul>
+    {% for filial in object_list %}
+        <li>{{ filial.nombre_filial }} - {{ filial.direccion }}</li>
+    {% endfor %}
+</ul>
+<footer>
+    <p>EL MÁS GRANDE SIEMPRE</p>
+</footer>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Nuevo Socio</h1>
+    </header>
+    <main>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+<footer>
+    <p>EL MÁS GRANDE SIEMPRE</p>
+</footer>
+</body>
+</html>
+{% endblock %}
